@@ -15,7 +15,7 @@
 <meta property="og:description" content="部署Cluster Mapmap的系统层级(树形结构，从root开始)123456789101112# typestype 0 osdtype 1 hosttype 2 chassistype 3 racktype 4 rowtype 5 pdutype 6 podtype 7 roomtype 8 datacentertype 9 regiontype 10 root  树形结构(例如room)">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-17T07:29:23.366Z">
-<meta property="article:modified_time" content="2020-03-17T07:45:53.247Z">
+<meta property="article:modified_time" content="2020-03-17T07:48:52.767Z">
 <meta property="article:author" content="JH Zeng">
 <meta property="article:tag" content="ceph">
 <meta name="twitter:card" content="summary">
@@ -97,7 +97,7 @@
 
 <p>树形结构(例如room)：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">rule-----root_rule</span><br><span class="line">			|------room1</span><br><span class="line">			|       |----rack01</span><br><span class="line">			|		|		|-----host01</span><br><span class="line">			|		|				|-----osd.1</span><br><span class="line">			|		|				|-----osd.2</span><br><span class="line">			|		|</span><br><span class="line">			|		|-----rack02</span><br><span class="line">			|</span><br><span class="line">			|</span><br><span class="line">			|------room2</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+
 <h4 id="bucket-每个系统层级的一个拓扑"><a href="#bucket-每个系统层级的一个拓扑" class="headerlink" title="bucket(每个系统层级的一个拓扑)"></a>bucket(每个系统层级的一个拓扑)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"># buckets</span><br><span class="line">host node65 &#123;</span><br><span class="line">        id -3           # do not change unnecessarily</span><br><span class="line">        id -4 class hdd         # do not change unnecessarily</span><br><span class="line">        # weight 0.195</span><br><span class="line">        alg straw2</span><br><span class="line">        hash 0  # rjenkins1</span><br><span class="line">        item osd.0 weight 0.098</span><br><span class="line">        item osd.2 weight 0.098</span><br><span class="line">&#125;</span><br><span class="line">host node66 &#123;</span><br><span class="line">        id -5           # do not change unnecessarily</span><br><span class="line">        id -6 class hdd         # do not change unnecessarily</span><br><span class="line">        # weight 0.195</span><br><span class="line">        alg straw2</span><br><span class="line">        hash 0  # rjenkins1</span><br><span class="line">        item osd.1 weight 0.098</span><br><span class="line">        item osd.3 weight 0.098</span><br><span class="line">&#125;</span><br><span class="line">root default &#123;</span><br><span class="line">        id -1           # do not change unnecessarily</span><br><span class="line">        id -2 class hdd         # do not change unnecessarily</span><br><span class="line">        # weight 0.391</span><br><span class="line">        alg straw2</span><br><span class="line">        hash 0  # rjenkins1</span><br><span class="line">        item node65 weight 0.195</span><br><span class="line">        item node66 weight 0.195</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>部署方式（当前只用于bluestore）：  </p>
@@ -175,7 +175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/PigletZ/2020/03/17/%E5%AD%98%E5%82%A8%E7%AD%96%E7%95%A5%E9%83%A8%E7%BD%B2/" data-id="ck7vletl100019gnx2nd2e27t" class="article-share-link">Share</a>
+      <a data-url="https://github.com/PigletZ/2020/03/17/%E5%AD%98%E5%82%A8%E7%AD%96%E7%95%A5%E9%83%A8%E7%BD%B2/" data-id="ck7vliw200001eknx77wn02he" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ceph/" rel="tag">ceph</a></li></ul>
