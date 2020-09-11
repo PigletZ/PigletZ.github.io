@@ -100,18 +100,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        * 修改历史
-
-日期版本描述作者2020-09-01V1.0ceph缓存分层曾靖华目录
-[TOC]
-
-缓存分类
+        缓存分类
 writeback（热数据）
 WRITEBACK模式是最复杂也是最有实用价值的模式，其具体实现会按照请求类型、cache状态综合判断，并复用前三种模式下的一些处理细节进行综合处理。处于这种模式下的cache tier存储池，其处理流程如下：
 
 判断cache tier存储池的状态是否已满，如果已满，则对于读请求直接调用do_proxy_read，对于写请求直接将OP加入到waiting_for_cache_not_full队列，并在下一次有新的请求达到时重新放入OP队列处理。
 
-在c
+在cache tier未满的情况下，先判断是否必须进行promote，如果需要就调用promote_obj
         
           <p class="article-more-link">
             <a href="/2020/09/11/ceph%E7%BC%93%E5%AD%98%E5%88%86%E5%B1%82/#more">Read More</a>
