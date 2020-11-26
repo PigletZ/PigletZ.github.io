@@ -74,6 +74,80 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ceph修改public_network" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/26/ceph%E4%BF%AE%E6%94%B9public_network/" class="article-date">
+  <time datetime="2020-11-26T11:17:47.782Z" itemprop="datePublished">2020-11-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ceph/">ceph</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/26/ceph%E4%BF%AE%E6%94%B9public_network/">ceph修改public_network</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        获取mon map
+1
+
+
+ceph mon getmap -o monmap
+
+
+查看mon map：
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+root@xjcc-1-80:~/piglet/mon# monmaptool --print monmap 
+monmaptool: monmap file monmap
+epoch 3
+fsid 977b0814-6472-45ec-9d89-914c6cf0daf7
+last_changed 2020-11-19T15:10:24.859843+0800
+created 2020-11-19T02:34:26.993044+0800
+m
+        
+          <p class="article-more-link">
+            <a href="/2020/11/26/ceph%E4%BF%AE%E6%94%B9public_network/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/PigletZ/2020/11/26/ceph%E4%BF%AE%E6%94%B9public_network/" data-id="ckhyqvvwj00042knxczngcqin" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mon/" rel="tag">mon</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-ceph缓存分层" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/11/ceph%E7%BC%93%E5%AD%98%E5%88%86%E5%B1%82/" class="article-date">
@@ -115,7 +189,7 @@ WRITEBACK模式是最复杂也是最有实用价值的模式，其具体实现�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/PigletZ/2020/09/11/ceph%E7%BC%93%E5%AD%98%E5%88%86%E5%B1%82/" data-id="ckey32kh40000wcnx5cwpgo93" class="article-share-link">Share</a>
+      <a data-url="https://github.com/PigletZ/2020/09/11/ceph%E7%BC%93%E5%AD%98%E5%88%86%E5%B1%82/" data-id="ckhyqvvw500002knx8i0p6wdm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ceph/" rel="tag">ceph</a></li></ul>
@@ -195,7 +269,7 @@ echo c > /proc/sysrq-trigger
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/PigletZ/2020/04/05/Kdump%E3%80%81watchdog%E3%80%81BMC%E9%85%8D%E7%BD%AE/" data-id="ck8lws8kf000hqonxc45tccmn" class="article-share-link">Share</a>
+      <a data-url="https://github.com/PigletZ/2020/04/05/Kdump%E3%80%81watchdog%E3%80%81BMC%E9%85%8D%E7%BD%AE/" data-id="ckhyqvvy7000n2knxb0b57b2i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
@@ -289,7 +363,7 @@ rule-----root_rule
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/PigletZ/2020/03/17/%E5%AD%98%E5%82%A8%E7%AD%96%E7%95%A5%E9%83%A8%E7%BD%B2/" data-id="ck8lws8iv0001qonxhfs2179v" class="article-share-link">Share</a>
+      <a data-url="https://github.com/PigletZ/2020/03/17/%E5%AD%98%E5%82%A8%E7%AD%96%E7%95%A5%E9%83%A8%E7%BD%B2/" data-id="ckhyqvvwl00062knx358zeqxn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ceph/" rel="tag">ceph</a></li></ul>
@@ -363,7 +437,7 @@ rule-----root_rule
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/PigletZ/2020/03/12/%E6%96%87%E4%BB%B6%E6%9F%A5%E8%AF%A2API%E6%8E%A5%E5%8F%A3/" data-id="ck8lws8j00004qonx8r0udo5q" class="article-share-link">Share</a>
+      <a data-url="https://github.com/PigletZ/2020/03/12/%E6%96%87%E4%BB%B6%E6%9F%A5%E8%AF%A2API%E6%8E%A5%E5%8F%A3/" data-id="ckhyqvvwf00012knxer3jgm6c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interface/" rel="tag">interface</a></li></ul>
@@ -426,7 +500,7 @@ $ hexo s
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/PigletZ/2020/03/12/hello-world/" data-id="ck8lws8im0000qonx1i06a45j" class="article-share-link">Share</a>
+      <a data-url="https://github.com/PigletZ/2020/03/12/hello-world/" data-id="ckhyqvvwk00052knx4reybiom" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ceph/" rel="tag">ceph</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
@@ -458,7 +532,7 @@ $ hexo s
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ceph/" rel="tag">ceph</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/interface/" rel="tag">interface</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ceph/" rel="tag">ceph</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/interface/" rel="tag">interface</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mon/" rel="tag">mon</a></li></ul>
     </div>
   </div>
 
@@ -468,7 +542,7 @@ $ hexo s
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ceph/" style="font-size: 20px;">ceph</a> <a href="/tags/interface/" style="font-size: 10px;">interface</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a>
+      <a href="/tags/ceph/" style="font-size: 20px;">ceph</a> <a href="/tags/interface/" style="font-size: 10px;">interface</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/mon/" style="font-size: 10px;">mon</a>
     </div>
   </div>
 
@@ -477,7 +551,7 @@ $ hexo s
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
     </div>
   </div>
 
@@ -488,6 +562,10 @@ $ hexo s
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/11/26/ceph%E4%BF%AE%E6%94%B9public_network/">ceph修改public_network</a>
+          </li>
         
           <li>
             <a href="/2020/09/11/ceph%E7%BC%93%E5%AD%98%E5%88%86%E5%B1%82/">ceph缓存分层</a>
@@ -503,10 +581,6 @@ $ hexo s
         
           <li>
             <a href="/2020/03/12/%E6%96%87%E4%BB%B6%E6%9F%A5%E8%AF%A2API%E6%8E%A5%E5%8F%A3/">对象文件查询接口</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/12/hello-world/">Hello World</a>
           </li>
         
       </ul>
